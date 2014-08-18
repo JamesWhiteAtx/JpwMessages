@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Read";
+}
+
+<style>
+    [class*="span"] {
+        background-color: rgba(86,61,124,.15);
+    }
+    [class*="span"]:hover {
+        background-color: rgba(86,61,124,.25);
+    }
+
+    div {
+        /*border: 1px solid rgba(86,61,124,.2);*/
+    }
+
+        div.check {
+            display: table-cell;
+            vertical-align: middle;
+            width: 20px;
+            
+        }
+
+    .mail-row {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: table;
+    }
+        
+    .mail-row .chk {
+        float: left;
+    }
+
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+</style>
+
+<div class="gopher">GOPHER!</div>
+
+<h2>Read</h2>
+@for (int intI = 0; intI < 3; intI++)
+{
+    <div class="mail-row clearfix">
+        <div class="check">
+            <input type="checkbox">
+        </div>
+        <div class="pull-left" style="width:75%;">
+            <div class="pull-left truncate">asdasd  asd asdasdasd asdasd asd asd asdasd</div>
+            <div class="pull-left truncate">asdasd  asd asdasdasd asdasd asd asd asdasd</div>
+        </div>
+    </div>
+    
+}
+
+<div class="row hidden-phone">
+    <div class="span3 offset1">From</div>
+    <div class="span6">Subject - Message</div>
+    <div class="span2">Date</div>
+</div>
+
+@for (int intI = 0; intI < 30; intI++)
+{
+    <div class="row mail-row">
+        <div class="span1 hidden-phone"><input type="checkbox"></div>
+        <div class="span3 clearfix">
+            <div class="pull-left visible-phone"><input type="checkbox"></div>
+            <div class="pull-left">Sender</div>
+            <div class="pull-right visible-phone">10/14/1066</div>
+        </div>
+        <div class="span6 truncate"><span>Update</span>-<span>Read this, please read this it is VERY VERY VERY</span></div>
+        <div class="span2 hidden-phone">10/14/1066</div>
+    </div>
+}
